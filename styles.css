@@ -1,0 +1,23 @@
+.hide-bullets {
+  list-style:none;
+  margin-left: -40px;
+  margin-top:20px;
+  display:flex;
+  align-content: center;
+  justify-content: center;
+  }
+#align-slider{
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+#align-albums{
+  /* display:flex;
+  align-content: center;
+  justify-content: center; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 28%;
+  text-align: center;
+}

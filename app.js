@@ -2,16 +2,33 @@ $(document).ready(function(){
     axios({
       method: "GET",
       url: `https://stg-resque.hakuapp.com/albums.json`
-    })
+     })
     .then(albumsWeGetBackFromApi => {
       console.log(albumsWeGetBackFromApi.data)
+
+    
     for(i=0; i < albumsWeGetBackFromApi.data.length; i++) {
-      $('.albums').append(`
-        <h4>${albumsWeGetBackFromApi.data[i].id}<h4>
+      let albumNumber = i;
+      if(i === 0){
+        $('.carousel-inner').append(`
+        <div class="active item" data-slide-number="${albumNumber}">
         <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
-        <h3>${albumsWeGetBackFromApi.data[i].name}</h3>
-        <h4>${albumsWeGetBackFromApi.data[i].artist_name}<h4>
+        <p>${albumsWeGetBackFromApi.data[i].name}</p>
+        <p>${albumsWeGetBackFromApi.data[i].artist_name}</p>
+        </div>
+         `)
+      }else{
+       $('.carousel-inner').append(`
+        <div class="item" data-slide-number="${albumNumber}">
+        <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
+        <p>${albumsWeGetBackFromApi.data[i].name}</p>
+        <p>${albumsWeGetBackFromApi.data[i].artist_name}</p>
+        </div>
         `)
+      }
+      $('#carousel-selector-' + albumNumber).append(`
+      <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
+      `)
     }
     })
     .catch(err => {
@@ -40,27 +57,25 @@ $(document).ready(function(){
       })
     }
 
-    $('#myCarousel').carousel({
-      interval: 5000
+$('#myCarousel').carousel({
+      interval: false
 });
 
 $('#carousel-text').html($('#slide-content-0').html());
 
 //Handles the carousel thumbnails
 $('[id^=carousel-selector-]').click( function(){
-      var id_selector = $(this).attr("id");
-      var id = id_selector.substr(id_selector.length -1);
-      var id = parseInt(id);
-      $('#myCarousel').carousel(id);
+  var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+  var id = parseInt(id);
+  $('#myCarousel').carousel(id);
 });
 
 
 // When the carousel slides, auto update the text
-$('#myCarousel').on('slid', function (e) {
-      var id = $('.item.active').data('slide-number');
+$('#myCarousel').on('slid.bs.carousel', function (e) {
+       var id = $('.item.active').data('slide-number');
       $('#carousel-text').html($('#slide-content-'+id).html());
 });
-
 
     
     
