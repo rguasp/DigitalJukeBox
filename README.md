@@ -16,8 +16,8 @@ https://stg-resque.hakuapp.com/songs.json?album_id=1
 INPUT PARAMETER: album_id (integer)
 RETURNS JSON OBJECT ARRAY:
 
-#Development Demo
-(DEMO)(Download Google Chrome plug-in before deploying)
+# Development Demo
+(DEMO)(Download Google Chrome plug-in before deploying)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 https://rguasp.github.io/DigitalJukeBox/
 
 Before deploying development demo install this google chrome plugin:
