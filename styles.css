@@ -18,49 +18,56 @@
   width: 28%;
   text-align: center;
 }
-/* .item.active{
-  background-color: steelblue;
-  color: white;
-} */
 .carousel-control.left{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #DDDDDD;
   background-image: none;
 }
 .carousel-control.right{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #DDDDDD;
   background-image: none;
 }
 .carousel-control.left:hover{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #0085B2;
   background-image: none;
 }
 .carousel-control.right:hover{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #0085B2;
   background-image: none;
 }
 .carousel-control.left:active{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #00698C;
   background-image: none;
 }
 .carousel-control.right:active{
   margin: auto;
   width: 10%;
-  height: 20%;
+  height: 50%;
   background: #00698C;
   background-image: none;
 }
+.heart {
+  font-size: 25px;
+  color:red;
+  padding-right: 30px;
+}
+.songlabel{
+  background-color: #DDDDDD;
+  padding: 5px;
+}
+
+

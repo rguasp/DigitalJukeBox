@@ -1,5 +1,5 @@
 // On Page Load
-$(document).ready(function(){   
+$(document).ready(function(){  
   function getTrackList(albumId){    
           axios({
             method:"GET",
@@ -11,27 +11,88 @@ $(document).ready(function(){
                   // sort function for tracklist
                   trackListWeGetBackFromApi.data.sort(function(a,b) {return a.song_order-b.song_order})
                   // appending tracklist to html with jquery
-                  $('#tracklist').append(`
-                  <li class="list-group-item clearfix">
-                  <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
-                  <div class="col-sm-2 set-padding-0>
-                  <div class="col-sm-1 text-center>
-                  <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
-                  </div>
-                  <div class="text-center set-padding-0" id="star">
-                  <a href="#" data-placement="top" title data-toggle="tooltip" data-original-title="mark as favorite!">
-                  <i class"star glyphicon glyphicon-star-empty" aria-hidden="true" style="font-size: 24px; color: #DDDDDD;"></i>
-                  </a>
-                  </div>
-                  </div>
-                  <div class="col-sm-9 set-padding-0">
-                  <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
-                  </div>
-                  </li>
-                  `)
-                  //tracklabel
-                  // <span id="songlabel">${trackListWeGetBackFromApi.data[i].song_label[0]}</span>
-                }
+                   if(trackListWeGetBackFromApi.data[i].song_label == (null||undefined)){
+                    $('#tracklist').append(`
+                    <li class="list-group-item clearfix">
+                    <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+                    <div class="col-sm-2 set-padding-0>
+                    <div class="col-sm-1 text-center>
+                    
+                    <i class="heart fa fa-heart-o"></i>
+                    
+                    <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                    </div>
+                    
+	                  
+                    </div>
+                    </div>
+                    <div class="col-sm-9 set-padding-0">
+                    <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                    </div>
+                    </li>
+                    `)
+                   }else if (trackListWeGetBackFromApi.data[i].song_label.length === 0){
+                    $('#tracklist').append(`
+                    <li class="list-group-item clearfix">
+                    <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+                    <div class="col-sm-2 set-padding-0>
+                    <div class="col-sm-1 text-center>
+                    
+                    <i class="heart fa fa-heart-o"></i>
+                    
+                    <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                    </div>
+                    
+	                  
+                    </div>
+                    </div>
+                    <div class="col-sm-9 set-padding-0">
+                    <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                    </div>
+                    </li>
+                    `)
+                   }else if(trackListWeGetBackFromApi.data[i].song_label.length === 1){
+                    $('#tracklist').append(`
+                    <li class="list-group-item clearfix">
+                    <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+                    <div class="col-sm-2 set-padding-0>
+                    <div class="col-sm-1 text-center>
+                    
+                    <i class="heart fa fa-heart-o"></i>
+                    
+                    <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                    </div>
+                    
+                    </div>
+                    </div>
+                    <div class="col-sm-9 set-padding-0">
+                    <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                    <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[0]}</span>
+                    </div>
+                    </li>
+                    `)
+                   }else if(trackListWeGetBackFromApi.data[i].song_label.length === 2)
+                   $('#tracklist').append(`
+                   <li class="list-group-item clearfix">
+                   <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+                   <div class="col-sm-2 set-padding-0>
+                   <div class="col-sm-1 text-center>
+                   
+                   <i class="heart fa fa-heart-o"></i>
+                   
+                   <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                   </div>
+                   
+                   </div>
+                   </div>
+                   <div class="col-sm-9 set-padding-0">
+                   <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                   <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[0]}</span>
+                   <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[1]}</span>
+                   </div>
+                   </li>
+                   `)
+                  }
               })
   }
   // axios call to access api for albums
@@ -97,6 +158,11 @@ $(document).ready(function(){
     var id = parseInt(id);
     $('#myCarousel').carousel(id);
   });
+// heart toggle on click
+$(document).on('click', '.heart.fa', function() {
+  $(this).toggleClass("fa-heart fa-heart-o");
+});
+
     
 }); // end document ready
   
