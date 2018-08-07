@@ -1,5 +1,6 @@
 // On Page Load
 $(document).ready(function(){  
+  // tracklist function inclused api call and tracklist appending
   function getTrackList(albumId){    
           axios({
             method:"GET",
@@ -11,6 +12,7 @@ $(document).ready(function(){
                   // sort function for tracklist
                   trackListWeGetBackFromApi.data.sort(function(a,b) {return a.song_order-b.song_order})
                   // appending tracklist to html with jquery
+                  // also checking if label is null undefined and how many labels there are
                    if(trackListWeGetBackFromApi.data[i].song_label == (null||undefined)){
                     $('#tracklist').append(`
                     <li class="list-group-item clearfix">

@@ -69,5 +69,13 @@
   background-color: #DDDDDD;
   padding: 5px;
 }
+.list-group-item:hover{
+  background:  #0085B2;
+  color: white;
+}
+#tracklist{
+  width:50%;
+  margin: auto;
+}
 
 
