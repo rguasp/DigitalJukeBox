@@ -12,12 +12,55 @@
   justify-content: center;
 }
 #align-albums{
-  /* display:flex;
-  align-content: center;
-  justify-content: center; */
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 28%;
   text-align: center;
+}
+/* .item.active{
+  background-color: steelblue;
+  color: white;
+} */
+.carousel-control.left{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #DDDDDD;
+  background-image: none;
+}
+.carousel-control.right{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #DDDDDD;
+  background-image: none;
+}
+.carousel-control.left:hover{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #0085B2;
+  background-image: none;
+}
+.carousel-control.right:hover{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #0085B2;
+  background-image: none;
+}
+.carousel-control.left:active{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #00698C;
+  background-image: none;
+}
+.carousel-control.right:active{
+  margin: auto;
+  width: 10%;
+  height: 20%;
+  background: #00698C;
+  background-image: none;
 }

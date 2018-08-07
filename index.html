@@ -3,84 +3,71 @@
   <head>
     <meta charset="utf-8">
     <title>JukeBox Example</title>
-   
+    <!-- bootstrap axios jquery scripts etc -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <!-- <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> -->
-    <!-- <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
-
     <link rel="stylesheet" href="styles.css">
+    <!-- bootstrap axios jquery scripts etc -->
   </head>
   <body>
-      <div class="container">
-          <div id="main_area">
-                             <div class="row hidden-xs" id="slider-thumbs">
-                          <!-- Bottom switcher of slider -->
-                          <ul class="hide-bullets">
-                              <li class="col-sm-2">
-                                  <a class="thumbnail" id="carousel-selector-0"></a>
-                              </li>
-  
-                              <li class="col-sm-2">
-                                  <a class="thumbnail" id="carousel-selector-1"></a>
-                              </li>
-  
-                              <li class="col-sm-2">
-                                  <a class="thumbnail" id="carousel-selector-2"></a>
-                              </li>
-  
-                              <li class="col-sm-2">
-                                  <a class="thumbnail" id="carousel-selector-3"></a>
-                              </li>
-  
-                              <li class="col-sm-2">
-                                  <a class="thumbnail" id="carousel-selector-4"></a>
-                              </li>
-                          </ul>                 
-                  </div>
-                  <!-- Slider -->
-                  <div class="row">
-                      <div class="col-xs-12" id="slider">
-                          <!-- Top part of the slider -->
-                          <div class="row" id="align-slider">
-                              <div class="col-sm-8" id="carousel-bounding-box">
-                                  <div class="carousel slide" id="myCarousel">
-                                      <!-- Carousel items -->
-                                      <div class="carousel-inner" id="align-albums">
-                                      </div>
-                                      <!-- Carousel nav -->
-                                      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                          <span class="glyphicon glyphicon-chevron-left"></span>                                       
-                                      </a>
-                                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                          <span class="glyphicon glyphicon-chevron-right"></span>                                       
-                                      </a>                                
-                                      </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div><!--/Slider-->
-  
- 
+    <div class="container">
+      <div id="main_area">
+        <div class="row hidden-xs" id="slider-thumbs">
+          <!-- Bottom switcher of slider -->
+          <ul class="hide-bullets">
+            <li class="col-sm-2">
+              <a class="thumbnail" id="carousel-selector-0"></a>
+            </li>
+            <li class="col-sm-2">
+              <a class="thumbnail" id="carousel-selector-1"></a>
+            </li>
+            <li class="col-sm-2">
+              <a class="thumbnail" id="carousel-selector-2"></a>
+            </li>
+            <li class="col-sm-2">
+              <a class="thumbnail" id="carousel-selector-3"></a>
+            </li>
+            <li class="col-sm-2">
+              <a class="thumbnail" id="carousel-selector-4"></a>
+            </li>
+          </ul>                 
+        </div>
+        <!-- Slider -->
+        <div class="row">
+          <div class="col-xs-12" id="slider">
+           <!-- Top part of the slider -->
+           <div class="row" id="align-slider">
+              <div class="col-sm-8" id="carousel-bounding-box">
+                <div class="carousel slide" id="myCarousel">
+                  <!-- Carousel items -->
+                  <div class="carousel-inner" id="align-albums">
+                    </div>
+                  <!-- Carousel nav -->
+                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>                                       
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>                                       
+                  </a>                                
+                </div>
+              </div>
+            </div>
           </div>
-  </div>
-  
-<div class="tracklist">
-  <h2>TrackList</h2>
-</div>
+        </div>
+        <!--/Slider-->
+      </div>
+    </div>
+    <ul class="list-group" id="tracklist">
+
+    </ul>
 
 
 
-
-
-
-
-
-
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
