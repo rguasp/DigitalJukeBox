@@ -20,7 +20,7 @@
     <div class="container">
       <div id="main_area">
         <div class="row hidden-xs" id="slider-thumbs">
-          <!-- Bottom switcher of slider -->
+          <!-- Top thumbnail album switcher of for carousel  -->
           <ul class="hide-bullets">
             <li class="col-sm-2">
               <a class="thumbnail" id="carousel-selector-0"></a>
@@ -37,35 +37,39 @@
             <li class="col-sm-2">
               <a class="thumbnail" id="carousel-selector-4"></a>
             </li>
-          </ul>                 
+          </ul>  
+           <!-- /Top thumbnail album switcher of for carousel -->               
         </div>
-        <!-- Slider -->
+        <!-- Carousel -->
         <div class="row">
           <div class="col-xs-12" id="slider">
            <!-- Top part of the slider -->
            <div class="row" id="align-slider">
               <div class="col-sm-8" id="carousel-bounding-box">
                 <div class="carousel slide" id="myCarousel">
-                  <!-- Carousel items -->
-                  <div class="carousel-inner" id="align-albums">
-                    </div>
-                  <!-- Carousel nav -->
+                  <!-- Carousel albums -->
+                  <div class="carousel-inner" id="align-albums"></div>
+                  <!-- /Carousel albums -->
+                  <!-- Carousel arrow controls -->
                   <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>                                       
                   </a>
                   <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
                     <span class="glyphicon glyphicon-chevron-right"></span>                                       
-                  </a>                                
+                  </a> 
+                  <!-- /Carousel arrow controls -->  
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--/Slider-->
+        <!--/Carousel-->
       </div>
     </div>
+    <!-- Tracklist -->
     <ul class="list-group" id="tracklist">
     </ul>
+    <!-- /Tracklist -->
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
