@@ -16,7 +16,14 @@ https://stg-resque.hakuapp.com/songs.json?album_id=1
 INPUT PARAMETER: album_id (integer)
 RETURNS JSON OBJECT ARRAY:
 
-#Demo
+#Development Demo
+
+Before deploying development demo install this google chrome plugin:
+(Due to Cors error unrelated to axios, Api cant handle cors and im not using express(work in progress))
+(install following plug-in)
+https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
+
+
 
 
 
