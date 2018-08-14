@@ -17,14 +17,10 @@ INPUT PARAMETER: album_id (integer)
 RETURNS JSON OBJECT ARRAY:
 
 # Development Demo
-(DEMO)(Download Google Chrome plug-in before deploying)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(DEMO)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 https://rguasp.github.io/DigitalJukeBox/
 
-Before deploying development demo install this google chrome plugin:
-(Due to Cors error unrelated to axios, Api cant handle cors also because im not using express
-(work in progress))
-(install following plug-in)
-https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en
+
 
 
 
