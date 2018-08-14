@@ -17,7 +17,7 @@ INPUT PARAMETER: album_id (integer)
 RETURNS JSON OBJECT ARRAY:
 
 # Development Demo
-(DEMO)>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+(DEMO)
 https://rguasp.github.io/DigitalJukeBox/
 
 
