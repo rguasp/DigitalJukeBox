@@ -2,82 +2,85 @@
 $(document).ready(function(){  
   // tracklist function inclused api call and tracklist appending
   function getTrackList(albumId){    
-    axios({
-      method:"GET",
-      url: `https://stg-resque.hakuapp.com/songs.json?album_id=${albumId}`
+    $.ajax({
+      type:"GET",
+      url: `https://stg-resque.hakuapp.com/songs.json?album_id=${albumId}`,
+      crossDomain: true,
+      dataType: 'jsonp'
     })
     .then(trackListWeGetBackFromApi => {  
+      console.log(trackListWeGetBackFromApi);
       // empty tracklist before new one is appended to erase past track list
       // can use hidden attribute or toggle to save on API requests
       $('#tracklist').empty();
-      for(i=0; i < trackListWeGetBackFromApi.data.length; i++) {
+      for(i=0; i < trackListWeGetBackFromApi.length; i++) {
         // sort function for tracklist order
-        trackListWeGetBackFromApi.data.sort(function(a,b) {return a.song_order-b.song_order})
+        trackListWeGetBackFromApi.sort(function(a,b) {return a.song_order-b.song_order})
         // appending tracklist to html with jquery
         // also checking if label is null undefined and how many labels there are 
-        if(trackListWeGetBackFromApi.data[i].song_label == (null||undefined)){
+        if(trackListWeGetBackFromApi[i].song_label == (null||undefined)){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
               <div class="col-sm-2 set-padding-0>
                 <div class="col-sm-1 text-center> 
                   <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 </div>
               </div>
               <div class="col-sm-9 set-padding-0">
-                <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
             </li>
           `)
         } 
-        else if (trackListWeGetBackFromApi.data[i].song_label.length === 0){
+        else if (trackListWeGetBackFromApi[i].song_label.length === 0){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
               <div class="col-sm-2 set-padding-0>
                 <div class="col-sm-1 text-center>
                   <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 </div>    
               </div>
               <div class="col-sm-9 set-padding-0">
-                <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
+                <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
             </li>
           `)
         }
-        else if(trackListWeGetBackFromApi.data[i].song_label.length === 1){
+        else if(trackListWeGetBackFromApi[i].song_label.length === 1){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
               <div class="col-sm-2 set-padding-0>
                  <div class="col-sm-1 text-center>
                     <i class="heart fa fa-heart-o"></i>
-                    <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                    <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                   </div> 
               </div>
               <div class="col-sm-9 set-padding-0">
-                <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
-                <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[0]}</span>
+                <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
+                <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
               </div>
             </li>
           `)
         }
-        else if(trackListWeGetBackFromApi.data[i].song_label.length === 2){
+        else if(trackListWeGetBackFromApi[i].song_label.length === 2){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi.data[i].song_duration}</span>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
               <div class="col-sm-2 set-padding-0>
                 <div class="col-sm-1 text-center>
                   <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi.data[i].song_order}</span>
+                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 </div>
               </div>
               <div class="col-sm-9 set-padding-0">
-                <span id="songname"> ${trackListWeGetBackFromApi.data[i].song_name}</span>
-                <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[0]}</span>
-                <span class="songlabel">${trackListWeGetBackFromApi.data[i].song_label[1]}</span>
+                <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
+                <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
+                <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[1]}</span>
               </div>
             </li>
           `)
@@ -86,9 +89,11 @@ $(document).ready(function(){
     })
   }
   // axios call to access api for albums
-  axios({
-    method: "GET",
-    url: `https://stg-resque.hakuapp.com/albums.json`
+  $.ajax({
+    type: "GET",
+    url: `https://stg-resque.hakuapp.com/albums.json`,
+    crossDomain: true,
+    dataType: 'jsonp'
   })
   // after axios call then following code executed with API information
   .then(albumsWeGetBackFromApi => {
@@ -100,40 +105,39 @@ $(document).ready(function(){
       // .index gets the index of said active slide aka its position in carousel
       let i = $(evt.relatedTarget).index();
       // I get the id of the album in the slide
-      let albumId = albumsWeGetBackFromApi.data[i].id;
+      let albumId = albumsWeGetBackFromApi[i].id;
       getTrackList(albumId);
     })
-    for(i=0; i < albumsWeGetBackFromApi.data.length; i++) {
+    for(i=0; i < albumsWeGetBackFromApi.length; i++) {
       let slideNumber = i;
       // if/else statement for auto active selection on pageload
       if(i === 0){
         // appends albums to carousel with jquery
         $('.carousel-inner').append(`
           <div class="active item" data-slide-number="${slideNumber}" style="font-family: 'Roboto', sans-serif;">
-            <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
-            <p>${albumsWeGetBackFromApi.data[i].name}</p>
-            <p>${albumsWeGetBackFromApi.data[i].artist_name}</p>
+            <img src="${albumsWeGetBackFromApi[i].cover_photo_url}" alt="AlbumCover">
+            <p>${albumsWeGetBackFromApi[i].name}</p>
+            <p>${albumsWeGetBackFromApi[i].artist_name}</p>
           </div>
         `)
         // on page load tracklist
-        getTrackList(albumsWeGetBackFromApi.data[i].id);
+        getTrackList(albumsWeGetBackFromApi[i].id);
       }
       else{
        $('.carousel-inner').append(`
           <div class="item" data-slide-number="${slideNumber}" style="font-family: 'Roboto', sans-serif;">
-            <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
-            <p>${albumsWeGetBackFromApi.data[i].name}</p>
-            <p>${albumsWeGetBackFromApi.data[i].artist_name}</p>
+            <img src="${albumsWeGetBackFromApi[i].cover_photo_url}" alt="AlbumCover">
+            <p>${albumsWeGetBackFromApi[i].name}</p>
+            <p>${albumsWeGetBackFromApi[i].artist_name}</p>
           </div>
         `)
       }
       // appends albums to carousel selector
       $('#carousel-selector-' + slideNumber).append(`
-        <img src="${albumsWeGetBackFromApi.data[i].cover_photo_url}" alt="AlbumCover">
+        <img src="${albumsWeGetBackFromApi[i].cover_photo_url}" alt="AlbumCover">
       `)
     }
   })
-
   // catches error and console logs it
   .catch(err => {
     console.log(err);
