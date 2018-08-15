@@ -1,6 +1,6 @@
 // On Page Load
 $(document).ready(function(){  
-  // tracklist function inclused api call and tracklist appending
+  // tracklist function includes api call and tracklist appending
   function getTrackList(albumId){    
     $.ajax({
       type:"GET",
@@ -9,7 +9,6 @@ $(document).ready(function(){
       dataType: 'jsonp'
     })
     .then(trackListWeGetBackFromApi => {  
-      console.log(trackListWeGetBackFromApi);
       // empty tracklist before new one is appended to erase past track list
       // can use hidden attribute or toggle to save on API requests
       $('#tracklist').empty();
