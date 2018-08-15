@@ -22,43 +22,47 @@
 /* Carousel left and right arrows */
 .carousel-control.left{
   margin: auto;
-  width: 10%;
-  height: 50%;
-  background: #DDDDDD;
+  width: 15%;
+  height: 35%;
+  background: white;
   background-image: none;
+  border-radius: 25px;
+  border: 2px solid #DDDDDD;
 }
 .carousel-control.right{
   margin: auto;
-  width: 10%;
-  height: 50%;
-  background: #DDDDDD;
+  width: 15%;
+  height: 35%;
+  background: white;
   background-image: none;
+  border-radius: 25px;
+  border: 2px solid #DDDDDD;
 }
 .carousel-control.left:hover{
   margin: auto;
-  width: 10%;
-  height: 50%;
+  width: 15%;
+  height: 35%;
   background: #0085B2;
   background-image: none;
 }
 .carousel-control.right:hover{
   margin: auto;
-  width: 10%;
-  height: 50%;
+  width: 15%;
+  height: 35%;
   background: #0085B2;
   background-image: none;
 }
 .carousel-control.left:active{
   margin: auto;
-  width: 10%;
-  height: 50%;
+  width: 15%;
+  height: 35%;
   background: #00698C;
   background-image: none;
 }
 .carousel-control.right:active{
   margin: auto;
-  width: 10%;
-  height: 50%;
+  width: 15%;
+  height: 35%;
   background: #00698C;
   background-image: none;
 }
@@ -69,6 +73,10 @@
   color:red;
   padding-right: 30px;
 }
+.heart:hover {
+  color: darkred;
+}
+
 .songlabel{
   background-color: #DDDDDD;
   padding: 5px;
@@ -84,6 +92,22 @@
   color: white;   
 }
 /* /Tracklist hover */
+
+#leftarrow{
+  color: #DDDDDD;
+}
+#rightarrow{
+  color: #DDDDDD;
+}
+.item.active{
+  height: 100%;
+}
+.item{
+  height: 100%;
+}
+
+
+
 
 
 
