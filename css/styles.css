@@ -22,96 +22,84 @@
 /* Carousel left and right arrows */
 .carousel-control.left{
   margin: auto;
-  width: 15%;
-  height: 35%;
+  width: 10%;
+  height: 30%;
   background: white;
   background-image: none;
   border-radius: 25px;
-  border: 2px solid #DDDDDD;
+  border: 1px solid #DDDDDD;
+  color: #DDDDDD;
 }
 .carousel-control.right{
   margin: auto;
-  width: 15%;
-  height: 35%;
+  width: 10%;
+  height: 30%;
   background: white;
   background-image: none;
   border-radius: 25px;
-  border: 2px solid #DDDDDD;
+  border: 1px solid #DDDDDD;
+  color: #DDDDDD;
 }
 .carousel-control.left:hover{
-  margin: auto;
-  width: 15%;
-  height: 35%;
   background: #0085B2;
-  background-image: none;
+  color: white;
 }
 .carousel-control.right:hover{
-  margin: auto;
-  width: 15%;
-  height: 35%;
   background: #0085B2;
-  background-image: none;
+  color: white;
 }
 .carousel-control.left:active{
-  margin: auto;
-  width: 15%;
-  height: 35%;
   background: #00698C;
-  background-image: none;
 }
 .carousel-control.right:active{
-  margin: auto;
-  width: 15%;
-  height: 35%;
   background: #00698C;
-  background-image: none;
 }
+
 /* /Carousel left and right arrows */
 
+/* Tracklist*/
+#tracklist{
+  width:50%;
+  margin: auto;
+  box-shadow: 0px 0px 25px 2px #888888;
+}
+  /* #tracklist li{
+    display: flex;
+  } */
+/* #tnum{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+} */
 .heart {
   font-size: 25px;
   color:red;
-  padding-right: 30px;
+  /* padding-right: 30px; */
+  padding-left: 30px;
 }
 .heart:hover {
   color: darkred;
 }
-
 .songlabel{
   background-color: #DDDDDD;
   padding: 5px;
 }
-#tracklist{
-  width:50%;
-  margin: auto;
-}
-
-/* Tracklist hover */
 .list-group-item:hover{
   background:  #0085B2;
   color: white;   
 }
-/* /Tracklist hover */
+/* /Tracklist */
 
-#leftarrow{
-  color: #DDDDDD;
-}
-#rightarrow{
-  color: #DDDDDD;
-}
+/* Album/Active album */
 .item.active{
   height: 100%;
 }
 .item{
   height: 100%;
 }
-/* li {
-  display: flex;
-  align-content: center;
-} */
-body{
-  display: flex;
-}
+/* Album/Active album */
+
+
 
 
 

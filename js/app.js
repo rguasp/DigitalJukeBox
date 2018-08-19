@@ -21,11 +21,9 @@ $(document).ready(function(){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
               <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0>
-                <div class="col-sm-1 text-center> 
-                  <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
-                </div>
+              <div class="col-sm-2 set-padding-0">
+                <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
+                <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
@@ -37,11 +35,9 @@ $(document).ready(function(){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
               <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0>
-                <div class="col-sm-1 text-center>
-                  <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
-                </div>    
+              <div class="col-sm-2 set-padding-0">
+                <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
+                <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
@@ -53,11 +49,9 @@ $(document).ready(function(){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
               <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0>
-                 <div class="col-sm-1 text-center>
-                    <i class="heart fa fa-heart-o"></i>
-                    <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
-                  </div> 
+              <div class="col-sm-2 set-padding-0">
+                 <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
+                 <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
@@ -70,11 +64,9 @@ $(document).ready(function(){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
               <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0>
-                <div class="col-sm-1 text-center>
-                  <i class="heart fa fa-heart-o"></i>
-                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
-                </div>
+              <div class="col-sm-2 set-padding-0">
+                <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
+                <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
