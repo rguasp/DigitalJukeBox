@@ -20,36 +20,35 @@ $(document).ready(function(){
         if(trackListWeGetBackFromApi[i].song_label == (null||undefined)){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0">
+              <div class="col-sm-2 set-padding-0" id="songorder">
                 <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         } 
         else if (trackListWeGetBackFromApi[i].song_label.length === 0){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0">
+              <div class="col-sm-2 set-padding-0" id="songorder">
                 <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 <i class="heart fa fa-heart-o"></i>
               </div>
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
         else if(trackListWeGetBackFromApi[i].song_label.length === 1){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0">
+              <div class="col-sm-2 set-padding-0" id="songorder">
                  <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                  <i class="heart fa fa-heart-o"></i>
               </div>
@@ -57,14 +56,14 @@ $(document).ready(function(){
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
               </div>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
         else if(trackListWeGetBackFromApi[i].song_label.length === 2){
           $('#tracklist').append(`
             <li class="list-group-item clearfix">
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
-              <div class="col-sm-2 set-padding-0">
+              <div class="col-sm-2 set-padding-0" id="songorder">
                 <span id="tnum">${trackListWeGetBackFromApi[i].song_order}</span>
                 <i class="heart fa fa-heart-o"></i>
               </div>
@@ -73,6 +72,7 @@ $(document).ready(function(){
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[1]}</span>
               </div>
+              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
