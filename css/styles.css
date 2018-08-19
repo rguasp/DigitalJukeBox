@@ -105,6 +105,13 @@
 .item{
   height: 100%;
 }
+/* li {
+  display: flex;
+  align-content: center;
+} */
+body{
+  display: flex;
+}
 
 
 
