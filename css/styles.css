@@ -59,7 +59,7 @@
 
 /* Tracklist*/
 #tracklist{
-  width:75%;
+  width:500px;
   margin: auto;
   box-shadow: 0px 0px 25px 2px #888888;
   resize: vertical;
