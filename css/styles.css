@@ -26,7 +26,6 @@
   height: 30%;
   background: white;
   background-image: none;
-  border-radius: 25px;
   border: 1px solid #DDDDDD;
   color: #DDDDDD;
 }
@@ -36,7 +35,6 @@
   height: 30%;
   background: white;
   background-image: none;
-  border-radius: 25px;
   border: 1px solid #DDDDDD;
   color: #DDDDDD;
 }
@@ -59,9 +57,9 @@
 
 /* Tracklist*/
 #tracklist{
-  width:500px;
+  width:85%;
   margin: auto;
-  box-shadow: 0px 0px 25px 2px #888888;
+  /* box-shadow: 0px 0px 25px 2px #888888; */
   resize: vertical;
   overflow: auto;
 }
