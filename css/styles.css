@@ -57,44 +57,58 @@
 
 /* Tracklist*/
 #tracklist{
-  width:85%;
+  width:55%;
   margin: auto;
   /* box-shadow: 0px 0px 25px 2px #888888; */
-  /* resize: vertical;
-  overflow: auto; */
 }
 #tracklist li{
-    display: flex;
-    align-items: center;
-    /* justify-items: inherit; */
-    flex-direction: row;
-    padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+}
+#tracklist li:hover{
+  color: white;
+  background:  #0085B2;
+}
+#tracklist li:hover .songlabel{
+  background-color:#90B9C9;
+  color: white;
+}
+#tracklist li:hover #songname{
+  color: white;
 }
 #songorder{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
-/* #tnum{
-  display: flex;
-  justify-content: center;
-  align-content: center;
-} */
+#songname{
+  color:#00698C;
+}
+#tnum{
+  background-color: #90B9C9;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 2px;
+  color: white;
+}
 .heart {
   font-size: 25px;
   color:red;
-  /* padding-right: 30px; */
   padding-left: 10px;
 }
 .heart:hover {
   color: darkred;
 }
 .songlabel{
+  display: inline-block;
   background-color: #DDDDDD;
   padding: 5px;
+  margin-bottom: 2px;
 }
-.list-group-item:hover{
-  background:  #0085B2;
-  color: white;   
+#songduration{
+  margin-left: auto;
 }
 /* /Tracklist */
 

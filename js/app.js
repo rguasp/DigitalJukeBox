@@ -27,7 +27,7 @@ $(document).ready(function(){
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
+              <span id="songduration">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         } 
@@ -41,7 +41,7 @@ $(document).ready(function(){
               <div class="col-sm-9 set-padding-0">
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
               </div>
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
+              <span id="songduration">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
@@ -56,7 +56,7 @@ $(document).ready(function(){
                 <span id="songname"> ${trackListWeGetBackFromApi[i].song_name}</span>
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
               </div>
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
+              <span id="songduration">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
@@ -72,7 +72,7 @@ $(document).ready(function(){
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[0]}</span>
                 <span class="songlabel">${trackListWeGetBackFromApi[i].song_label[1]}</span>
               </div>
-              <span class="badge" id="badge-custom">${trackListWeGetBackFromApi[i].song_duration}</span>
+              <span id="songduration">${trackListWeGetBackFromApi[i].song_duration}</span>
             </li>
           `)
         }
