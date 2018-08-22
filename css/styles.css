@@ -22,7 +22,7 @@
 /* Carousel left and right arrows */
 .carousel-control.left{
   margin: auto;
-  width: 10%;
+  width: 15%;
   height: 30%;
   background: white;
   background-image: none;
@@ -31,7 +31,7 @@
 }
 .carousel-control.right{
   margin: auto;
-  width: 10%;
+  width: 15%;
   height: 30%;
   background: white;
   background-image: none;
@@ -60,8 +60,8 @@
   width:85%;
   margin: auto;
   /* box-shadow: 0px 0px 25px 2px #888888; */
-  resize: vertical;
-  overflow: auto;
+  /* resize: vertical;
+  overflow: auto; */
 }
 #tracklist li{
     display: flex;
